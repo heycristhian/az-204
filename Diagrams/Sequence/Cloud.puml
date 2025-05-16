@@ -1,0 +1,24 @@
+@startuml
+actor Usuário
+participant "Azure CLI / Postman\n(Acquire Token)" as Cliente
+participant "Azure AD\n(Microsoft Identity)" as AzureAD
+participant "Azure Function (HTTP Trigger)" as Function
+participant "Blob Storage" as Storage
+
+== Autenticação manual ==
+Usuário -> Cliente : Solicita token de acesso (com client_id)
+Cliente -> AzureAD : Faz login e requisita access_token
+AzureAD --> Cliente : Retorna access_token (JWT)
+
+== Chamada da Function ==
+Cliente -> Function : POST /upload-image\nAuthorization: Bearer <token>
+Function -> AzureAD : Valida token JWT
+AzureAD --> Function : Token válido
+
+== Salvar imagem ==
+Function -> Storage : Salva a imagem
+Storage --> Function : Confirma salvamento
+
+== Resposta ==
+Function --> Cliente : Retorna URL (com ou sem SAS)
+@enduml
