@@ -1,17 +1,17 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
   <diagram name="Página-1" id="gpNOYjVd6HxU8vN9J9q5">
-    <mxGraphModel dx="2253" dy="2018" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3204" dy="2584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <object placeholders="1" c4Name="Cloud" c4Type="" c4Application="Azure" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="YXVcPwX8FtpRiKQenqQ3-1">
           <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#A9C4EB;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
-            <mxGeometry x="-40" y="-100" width="1060" height="700" as="geometry" />
+            <mxGeometry x="-40" y="-210" width="1080" height="850" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="sub-sandbox-cloud" c4Type="" c4Application="Subscription" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="YXVcPwX8FtpRiKQenqQ3-2">
           <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=#FFFFCC;strokeColor=#FFFF31;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
-            <mxGeometry x="20" y="-70" width="940" height="620" as="geometry" />
+            <mxGeometry x="20" y="-140" width="940" height="690" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="VNET" c4Type="" c4Application="nomedavnet" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="YXVcPwX8FtpRiKQenqQ3-5">
@@ -107,16 +107,16 @@
         <mxCell id="fhZvTXo2q_ykCYD8lwFD-30" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-200" y="250" width="65" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="qq8qalPvTng3lcce3Zkm-3" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="7yqf-h_1w94d-ijL40_c-1" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="40" y="40" width="150" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="qq8qalPvTng3lcce3Zkm-4" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Azure Identity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="qq8qalPvTng3lcce3Zkm-3">
+        <mxCell id="7yqf-h_1w94d-ijL40_c-2" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Azure Identity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="7yqf-h_1w94d-ijL40_c-1">
           <mxGeometry width="150" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="qq8qalPvTng3lcce3Zkm-5" value="&lt;b&gt;Resource Group&lt;/b&gt;&lt;br&gt;[rg-sandbox&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;-&lt;span style=&quot;background-color: transparent;&quot;&gt;api]&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="qq8qalPvTng3lcce3Zkm-3">
+        <mxCell id="7yqf-h_1w94d-ijL40_c-3" value="&lt;b&gt;Resource Group&lt;/b&gt;&lt;br&gt;[rg-sandbox&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;-&lt;span style=&quot;background-color: transparent;&quot;&gt;api]&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="7yqf-h_1w94d-ijL40_c-1">
           <mxGeometry x="15" y="100" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qq8qalPvTng3lcce3Zkm-7" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Azure_Active_Directory.svg;" vertex="1" parent="qq8qalPvTng3lcce3Zkm-3">
+        <mxCell id="7yqf-h_1w94d-ijL40_c-5" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Azure_Active_Directory.svg;" vertex="1" parent="7yqf-h_1w94d-ijL40_c-1">
           <mxGeometry x="40" y="10" width="70" height="64" as="geometry" />
         </mxCell>
       </root>
