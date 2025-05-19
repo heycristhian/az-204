@@ -1,0 +1,128 @@
+@startuml Upload image
+
+/'----------------------------------------------------------------------
+  FORMATAÇÕES GERAIS
+  ----------------------------------------------------------------------'/
+skinparam diagramBorderColor black
+skinparam diagramBorderThickness 3
+skinparam participantPadding 20
+skinparam defaultFontName helvetica
+skinparam defaultFontColor black
+skinparam sequenceTitleFontSize 30
+skinparam sequenceParticipantBorderColor black
+skinparam sequenceParticipantFontSize 14
+skinparam actorBackgroundColor transparent
+skinparam actorBorderColor black
+skinparam actorFontSize 14
+skinparam sequenceBoxBorderColor transparent
+skinparam sequenceGroupBodyBackgroundColor transparent
+skinparam sequenceReferenceBackgroundColor ffffe6
+skinparam arrowFontName Courier
+skinparam shadowing false
+skinparam useBetaStyle true
+hide footbox
+
+/'----------------------------------------------------------------------
+  PARTICIPANTES
+  ----------------------------------------------------------------------'/
+box "\nExternal\n" #f7cbcb
+  participant cli as "Client" #f9b6b6
+end box
+box "\nAzure\n" #d3edd6
+  participant id as "Entra ID" #aeeab2
+  participant api as "apim-handle-image" #aeeab2
+  participant func as "func-handle-image" #aeeab2
+  participant kv as "sec-handle-image" #aeeab2
+  participant blob as "blob-handle-image" #aeeab2
+end box
+
+/'----------------------------------------------------------------------
+  TITULO
+  ----------------------------------------------------------------------'/
+title Upload image
+
+/'----------------------------------------------------------------------
+  FLUXO
+  ----------------------------------------------------------------------'/
+
+cli -> id++: \n\
+**Endpoint**: POST /url \n\
+**Header**: 'Content-Type: application/json' \n\
+**Body**: {} \n\
+|||
+
+id -> cli--: \n\
+**HTTP 200** \n\
+{\n\
+  "token_type": "Bearer",\n\
+  "expires_in": 3600,\n\
+  "ext_expires_in": 3600,\n\
+  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIs..."\n\
+}\n\
+|||
+
+cli -> api++: \n\
+**Endpoint**: POST /upload-image \n\
+**Header**: 'Content-Type: application/json' \n\
+**Header**: 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIs...' \n\
+\n\
+**Body**: {}
+|||
+
+api -> api: \n\
+validate-jwt (Azure APIM) \n\
+|||
+
+break#ffffff #ffffff Invalid token
+
+api --> cli: \n\
+**HTTP 401**  \n\
+{\n\
+  "error": "invalid_token",\n\
+  "error_description": "The access token is malformed or invalid"\n\
+}\n\
+|||
+
+end
+
+break#ffffff #ffffff Expired token
+
+api --> cli: \n\
+**HTTP 401**  \n\
+{\n\
+  "error": "invalid_token",\n\
+  "error_description": "The access token has expired"\n\
+}\n\
+|||
+
+end
+
+api -> func++: \n\
+**Endpoint**: POST /upload-image \n\
+**Header**: 'Content-Type: application/json' \n\
+**Body**: {} \n\
+|||
+
+func <-> kv: \n\
+Get Blob Connection String\n\
+|||
+
+func <-> blob: \n\
+Upload image via SDK\n(secured via connection string / SAS) \n\
+|||
+
+func -> api--: \n\
+**HTTP 200**  \n\
+{\n\
+  "urlImage": "https://storage.blob.core.windows.net/container/file.png"\n\
+}\n\
+|||
+
+api -> cli--: \n\
+**HTTP 200**  \n\
+{\n\
+  "urlImage": "https://storage.blob.core.windows.net/container/file.png"\n\
+}\n\
+|||
+
+@enduml
